@@ -1,12 +1,14 @@
-SOURCES ?= $(wildcard *.FCStd)
-TARGETS ?= $(patsubst %.FCStd,%.dir,$(SOURCES))
+SOURCES_DIR ?= $(wildcard *.dir)
+SOURCES_ZIP ?= $(patsubst %.dir,%.FCStd,$(SOURCES_DIR))
 UNZIP   ?= unzip
 ZIP     ?= zip
 YES     ?= yes
 
 .DEFAULT_GOAL := all
 
-all: $(TARGETS) ## Uncompress FCStd files into directories
+all: $(SOURCES_DIR) ## Uncompress FCStd files into directories to update
+
+freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
 %.dir: %.FCStd
 	$(YES) | $(UNZIP) $< -d $@
@@ -38,3 +40,5 @@ help: ## Prints help for targets with comments
 		};' \
 		$(MAKEFILE_LIST)
 
+
+# vim: nospell fdm=marker cc=80
