@@ -16,6 +16,9 @@ freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 %.FCStd: %.dir
 	$(ZIP) -r -j $@ $<
 
+clean:
+	rm $(SOURCES_ZIP)
+
 
 # This is used for printing defined variables from Some other scripts. For
 # instance if you want to know the value of the PDF_VIEWER defined in the
