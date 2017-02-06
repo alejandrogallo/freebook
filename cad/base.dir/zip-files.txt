@@ -1,4 +1,3 @@
-----
 Document.xml
 PartShape.brp
 PartShape1.brp
