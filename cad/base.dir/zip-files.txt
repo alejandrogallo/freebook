@@ -1,4 +1,8 @@
+----
 Document.xml
 PartShape.brp
+PartShape1.brp
+PartShape2.brp
 GuiDocument.xml
 DiffuseColor
+DiffuseColor1

@@ -12,14 +12,16 @@ FILES_ZIP   ?= $(patsubst %.dir,%.dir/$(ZIP_FILES_NAME),$(SOURCES_DIR))
 all: $(SOURCES_DIR) $(FILES_ZIP) ## Uncompress FCStd files into directories to update
 	$(info Creating $<)
 
-freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
+update: $(SOURCES_DIR)
 
-%.dir: %.FCStd
-	$(YES) | $(UNZIP) $< -d $@
+freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
 %.FCStd: %.dir/ %.dir/$(ZIP_FILES_NAME)
 	$(info Creating $@ from $< )
 	cd $*.dir; $(ZIP) ../$@ -@ < $(ZIP_FILES_NAME)
+
+%.dir: %.FCStd
+	$(YES) | $(UNZIP) $< -d $@
 
 %.dir/$(ZIP_FILES_NAME): %.FCStd
 	$(UNZIP) -l $*.FCStd \
