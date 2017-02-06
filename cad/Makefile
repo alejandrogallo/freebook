@@ -10,6 +10,7 @@ FILES_ZIP   ?= $(patsubst %.dir,%.dir/$(ZIP_FILES_NAME),$(SOURCES_DIR))
 .DEFAULT_GOAL := all
 
 all: $(SOURCES_DIR) $(FILES_ZIP) ## Uncompress FCStd files into directories to update
+	$(info Creating $<)
 
 freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
@@ -22,11 +23,12 @@ freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
 %.dir/$(ZIP_FILES_NAME): %.FCStd
 	$(UNZIP) -l $*.FCStd \
-		| sed -e "1,4d; " \
+		| sed -e "1,3d; " \
 		| tac \
 		| sed 1,2d \
 		| tac \
-		| awk '{print $$4}' > $@
+		| awk '{print $$4}' \
+		| tee $@
 
 clean:
 	rm $(SOURCES_ZIP)
