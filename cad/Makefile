@@ -16,7 +16,10 @@ update: $(SOURCES_DIR)
 
 freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
-%.FCStd: %.dir/ %.dir/$(ZIP_FILES_NAME)
+# %.FCStd also depends on %.dir/$(ZIP_FILES_NAME)
+# however if I add it there is a circular dependency and it
+# apparently does not work well
+%.FCStd: %.dir/
 	$(info Creating $@ from $< )
 	cd $*.dir; $(ZIP) ../$@ -@ < $(ZIP_FILES_NAME)
 
