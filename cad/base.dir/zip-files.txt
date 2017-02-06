@@ -1,0 +1,4 @@
+Document.xml
+PartShape.brp
+GuiDocument.xml
+DiffuseColor

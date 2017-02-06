@@ -14,10 +14,10 @@
 			<String value=""/>
 		</Property>
 		<Property name="CreationDate" type="App::PropertyString">
-			<String value="Sun Feb  5 12:55:28 2017&#xA;"/>
+			<String value="Sun Feb  5 13:07:30 2017&#xA;"/>
 		</Property>
 		<Property name="FileName" type="App::PropertyString">
-			<String value="base.FCStd"/>
+			<String value="/home/ale/software/freebook/cad/base.FCStd"/>
 		</Property>
 		<Property name="Id" type="App::PropertyString">
 			<String value=""/>
@@ -29,7 +29,7 @@
 			<String value=""/>
 		</Property>
 		<Property name="LastModifiedDate" type="App::PropertyString">
-			<String value="Sun Feb  5 12:56:23 2017&#xA;"/>
+			<String value="Sun Feb  5 13:09:43 2017&#xA;"/>
 		</Property>
 		<Property name="License" type="App::PropertyString">
 			<String value="CC-BY 3.0"/>
@@ -46,7 +46,7 @@
 			</Map>
 		</Property>
 		<Property name="Uid" type="App::PropertyUUID">
-			<Uuid value="355d47d5-12d7-4da6-a87a-d7f1228824c4"/>
+			<Uuid value="803ec36d-26e8-4aa5-ab3e-78d1559fcdac"/>
 		</Property>
 	</Properties>
 	<Objects Count="1">
@@ -56,7 +56,7 @@
 		<Object name="Sketch">
 			<Properties Count="7">
 				<Property name="Constraints" type="Sketcher::PropertyConstraintList">
-					<ConstraintList count="8">
+					<ConstraintList count="12">
 						<Constrain Name="" Type="1" Value="0.000000000000" First="0" FirstPos="2" Second="1" SecondPos="1" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
 						<Constrain Name="" Type="1" Value="0.000000000000" First="1" FirstPos="2" Second="2" SecondPos="1" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
 						<Constrain Name="" Type="1" Value="0.000000000000" First="2" FirstPos="2" Second="3" SecondPos="1" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
@@ -65,6 +65,10 @@
 						<Constrain Name="" Type="2" Value="0.000000000000" First="2" FirstPos="0" Second="-2000" SecondPos="0" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
 						<Constrain Name="" Type="3" Value="0.000000000000" First="1" FirstPos="0" Second="-2000" SecondPos="0" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
 						<Constrain Name="" Type="3" Value="0.000000000000" First="3" FirstPos="0" Second="-2000" SecondPos="0" Third="-2000" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
+						<Constrain Name="" Type="14" Value="0.000000000000" First="0" FirstPos="1" Second="0" SecondPos="2" Third="-2" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
+						<Constrain Name="" Type="14" Value="0.000000000000" First="0" FirstPos="1" Second="2" SecondPos="2" Third="-1" ThirdPos="0" LabelDistance="10.000000000000" LabelPosition="0.000000000000" />
+						<Constrain Name="" Type="7" Value="320.000000000000" First="0" FirstPos="0" Second="-2000" SecondPos="0" Third="-2000" ThirdPos="0" LabelDistance="17.338346481323" LabelPosition="-5.307692527771" />
+						<Constrain Name="" Type="8" Value="220.000000000000" First="3" FirstPos="0" Second="-2000" SecondPos="0" Third="-2000" ThirdPos="0" LabelDistance="26.008531570435" LabelPosition="0.000000000000" />
 					</ConstraintList>
 				</Property>
 				<Property name="ExternalGeometry" type="App::PropertyLinkSubList">
@@ -75,19 +79,19 @@
 					<GeometryList count="4">
 						<Geometry  type="Part::GeomLineSegment">
 							<Construction value="0"/>
-							<LineSegment StartX="-17.409237000000" StartY="10.827699000000" StartZ="0.000000000000" EndX="27.387699000000" EndY="10.827699000000" EndZ="0.000000000000"/>
+							<LineSegment StartX="-160.000000000000" StartY="110.000000000000" StartZ="0.000000000000" EndX="160.000000000000" EndY="110.000000000000" EndZ="0.000000000000"/>
 						</Geometry>
 						<Geometry  type="Part::GeomLineSegment">
 							<Construction value="0"/>
-							<LineSegment StartX="27.387699000000" StartY="10.827699000000" StartZ="0.000000000000" EndX="27.387699000000" EndY="-16.135391000000" EndZ="0.000000000000"/>
+							<LineSegment StartX="160.000000000000" StartY="110.000000000000" StartZ="0.000000000000" EndX="160.000000000000" EndY="-110.000000000000" EndZ="0.000000000000"/>
 						</Geometry>
 						<Geometry  type="Part::GeomLineSegment">
 							<Construction value="0"/>
-							<LineSegment StartX="27.387699000000" StartY="-16.135391000000" StartZ="0.000000000000" EndX="-17.409237000000" EndY="-16.135391000000" EndZ="0.000000000000"/>
+							<LineSegment StartX="160.000000000000" StartY="-110.000000000000" StartZ="0.000000000000" EndX="-160.000000000000" EndY="-110.000000000000" EndZ="0.000000000000"/>
 						</Geometry>
 						<Geometry  type="Part::GeomLineSegment">
 							<Construction value="0"/>
-							<LineSegment StartX="-17.409237000000" StartY="-16.135391000000" StartZ="0.000000000000" EndX="-17.409237000000" EndY="10.827699000000" EndZ="0.000000000000"/>
+							<LineSegment StartX="-160.000000000000" StartY="-110.000000000000" StartZ="0.000000000000" EndX="-160.000000000000" EndY="110.000000000000" EndZ="0.000000000000"/>
 						</Geometry>
 					</GeometryList>
 				</Property>

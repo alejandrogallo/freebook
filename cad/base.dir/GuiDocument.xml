@@ -78,5 +78,5 @@
 			</Properties>
 		</ViewProvider>
 	</ViewProviderData>
-	<Camera settings="  OrthographicCamera {   viewportMapping ADJUST_CAMERA   position 0 0 87   orientation 0 0 1  0   nearDistance 86.913002   farDistance 87.087006   aspectRatio 1   focalDistance 87   height 143.52005  } "/>
+	<Camera settings="  OrthographicCamera {   viewportMapping ADJUST_CAMERA   position -37.516651 -52.150208 87   orientation 0 0 1  0   nearDistance 86.913002   farDistance 87.087006   aspectRatio 1   focalDistance 87   height 390.12796  } "/>
 </Document>

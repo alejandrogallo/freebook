@@ -1,20 +1,32 @@
 SOURCES_DIR ?= $(wildcard *.dir)
 SOURCES_ZIP ?= $(patsubst %.dir,%.FCStd,$(SOURCES_DIR))
-UNZIP   ?= unzip
-ZIP     ?= zip
-YES     ?= yes
+UNZIP       ?= unzip
+ZIP         ?= zip
+YES         ?= yes
+DEPS_DIR    ?= .deps
+ZIP_FILES_NAME ?= zip-files.txt
+FILES_ZIP   ?= $(patsubst %.dir,%.dir/$(ZIP_FILES_NAME),$(SOURCES_DIR))
 
 .DEFAULT_GOAL := all
 
-all: $(SOURCES_DIR) ## Uncompress FCStd files into directories to update
+all: $(SOURCES_DIR) $(FILES_ZIP) ## Uncompress FCStd files into directories to update
 
 freecad-files: $(SOURCES_ZIP) ## Compress directories into freecad files
 
 %.dir: %.FCStd
 	$(YES) | $(UNZIP) $< -d $@
 
-%.FCStd: %.dir
-	$(ZIP) -r -j $@ $<
+%.FCStd: %.dir/ %.dir/$(ZIP_FILES_NAME)
+	$(info Creating $@ from $< )
+	cd $*.dir; $(ZIP) ../$@ -@ < $(ZIP_FILES_NAME)
+
+%.dir/$(ZIP_FILES_NAME): %.FCStd
+	$(UNZIP) -l $*.FCStd \
+		| sed -e "1,4d; " \
+		| tac \
+		| sed 1,2d \
+		| tac \
+		| awk '{print $$4}' > $@
 
 clean:
 	rm $(SOURCES_ZIP)
